@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  foldtounfold:
+    build: .
+    container_name: foldtounfold
+    ports:
+      - "8890:80"
+    restart: always
+    volumes:
+      - /matrix/static-files/public/jorge:/usr/share/nginx/html:ro

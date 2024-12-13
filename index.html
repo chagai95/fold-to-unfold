@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fold to Unfold | Jorge's Origami Journey</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --accent: #4a90e2;
+            --bg: #f8f9fa;
+            --text: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            padding: 20px 5%;
+            background: rgba(26, 26, 26, 0.95);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .hero {
+            height: 100vh;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+            position: relative;
+        }
+
+        .hero-content {
+            width: 50%;
+            padding-right: 50px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .origami-examples {
+            padding: 100px 10%;
+            background: white;
+        }
+
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .example-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .example-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .example-card-content {
+            padding: 20px;
+        }
+
+        .about {
+            padding: 100px 10%;
+            background: var(--bg);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .video-section {
+            padding: 100px 10%;
+            background: var(--primary);
+            color: white;
+            text-align: center;
+        }
+
+        .video-container {
+            margin-top: 40px;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            aspect-ratio: 16/9;
+            background: #333;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .workshop {
+            padding: 100px 10%;
+            background: white;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 100px;
+            }
+            
+            .hero-content {
+                width: 100%;
+                padding-right: 0;
+            }
+
+            .examples-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">JORGE</div>
+        <div class="nav-links">
+            <a href="#examples">Gallery</a>
+            <a href="#about">About</a>
+            <a href="#workshop">Workshop</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content" data-aos="fade-right">
+            <h1>Fold to Unfold</h1>
+            <p>Discover the meditative art of origami - where each fold brings clarity, and every crease tells a story of patience and mindfulness.</p>
+            <a href="#workshop" class="btn">Join Workshop</a>
+        </div>
+    </section>
+
+    <section id="examples" class="origami-examples">
+        <h2 data-aos="fade-up">Featured Creations</h2>
+        <div class="examples-grid">
+            <div class="example-card" data-aos="fade-up">
+                <img src="bird.jpg" alt="Origami Bird">
+                <div class="example-card-content">
+                    <h3>Elegant Crane</h3>
+                    <p>A symbol of peace and hope in Japanese culture</p>
+                </div>
+            </div>
+            <div class="example-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="rabit.jpg" alt="Origami Rabbit">
+                <div class="example-card-content">
+                    <h3>Playful Rabbit</h3>
+                    <p>Complex folds creating life-like features</p>
+                </div>
+            </div>
+            <div class="example-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="turtle.jpg" alt="Origami Turtle">
+                <div class="example-card-content">
+                    <h3>Wise Turtle</h3>
+                    <p>Intricate shell patterns and geometric design</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-content" data-aos="fade-right">
+            <h2>About Jorge</h2>
+            <p>Origami isn't just about folding paper - it's about unfolding your mind. Through each careful crease and deliberate fold, we find moments of peace and clarity. In our fast-paced world, this ancient art offers a path to mindfulness and relaxation.</p>
+            <p>Through workshops and demonstrations, I share my passion for origami with others, helping them discover the meditative and rewarding nature of this ancient art form.</p>
+        </div>
+        <img src="jorge-with-sheep.png" alt="Jorge" data-aos="fade-left">
+    </section>
+
+    <section class="video-section">
+        <h2 data-aos="fade-up">Watch Me Create</h2>
+        <div class="video-container" data-aos="fade-up">
+            <video width="100%" height="100%" controls>
+                <source src="origami.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <section id="workshop" class="workshop">
+        <h2 data-aos="fade-up">Join My Workshop</h2>
+        <p data-aos="fade-up">Learn the art of origami in an interactive session where we'll explore basic to advanced techniques.</p>
+        <div data-aos="fade-up">
+            <a href="#" class="btn">Join WhatsApp Group</a>
+            <a href="#" class="btn">Register on Meetup</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Jorge's Origami Art</p>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>
